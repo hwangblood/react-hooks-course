@@ -5,6 +5,7 @@
 .App {
   /* self center in parent */
   margin: 0 auto;
+  padding-bottom: 50px;
   /* border: 1px solid black; */
 }
 /* Extra small devices (phones, 600px and down) */
@@ -38,13 +39,42 @@
   }
 }
 
-/* FOR EACH HOOK EXAMPLE COMPONENTS */
-
-.HookExampleList hr {
-  height: 1px;
-  margin-top: 20px;
+.flex {
+  display: flex;
 }
+.GutterColumn {
+  height: 12px;
+}
+.GutterRow {
+  display: inline-block;
+  width: 8px;
+}
+.Divider hr,
+.ListDivider hr {
+  height: 1px;
+}
+.ListFooter {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* FOR EACH HOOK EXAMPLE COMPONENTS */
 
 .HookExampleListItem {
   margin: 0 auto;
+}
+
+.HookExampleUsecase {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.UsecaseTitle {
+  font-size: 1.15rem;
+}
+
+.UsecaseSubtitle {
+  font-size: 1.1rem;
+  color: rgb(69, 69, 69);
 }

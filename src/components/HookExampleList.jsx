@@ -1,33 +1,26 @@
 import PropTypes from "prop-types";
 import HookExampleListItem from "./HookExampleListItem";
+import ListFooter from "./ListFooter";
 
 const HookExampleList = ({ items }) => {
-  const hasExamples = items != (null || undefined) && items.length > 0;
-
-  const isLastExample = (index) => index == items.length - 1;
-
   return (
-    <>
-      {hasExamples ? (
-        //  Generate hook examples
-        <div className="HookExampleList">
-          {hasExamples &&
-            items.map((item, index) => (
-              <div key={item.id}>
-                {/* Hook Example */}
-                <HookExampleListItem item={item} />
-                {/* show divider between examples */}
-                {!isLastExample(index) && <hr />}
-              </div>
-            ))}
-        </div>
-      ) : (
-        //  Don't have any hook examples, show a empty state
-        <div>No hook examples found!</div>
-      )}
-    </>
+    <div className="HookExampleList">
+      {/* Generate hook examples */}
+      {
+        // eslint-disable-next-line no-unused-vars
+        items.map((item, index) => (
+          <div key={item.id}>
+            {/* Hook Example */}
+            <HookExampleListItem item={item} />
+            {/* show divider between list items */}
+          </div>
+        ))
+      }
+      <ListFooter />
+    </div>
   );
 };
+
 HookExampleList.propTypes = {
   items: PropTypes.array.isRequired,
 };
