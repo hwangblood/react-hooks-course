@@ -6,7 +6,7 @@ const CounterUsecase = () => {
   const decrease = () => setCount(count + 1);
   return (
     <>
-      <button onClick={increase}>Increment</button>
+      <button onClick={increase}>-</button>
       <span
         style={{
           margin: "0px 8px",
@@ -14,7 +14,7 @@ const CounterUsecase = () => {
       >
         {count}
       </span>
-      <button onClick={decrease}>Decrement</button>
+      <button onClick={decrease}>+</button>
     </>
   );
 };

@@ -2,11 +2,13 @@ import { useState } from "react";
 import GutterRow from "../../GutterRow";
 
 const InputValueUsecase = () => {
-  const defaultValue = "Empty Value";
+  const defaultValue = "Non";
   const [inputValue, setInputValue] = useState("");
   const updateValue = (value) => {
     const newValue =
-      value == (null || undefined) || value.length == 0 ? defaultValue : value;
+      value == (null || undefined) || value.length == 0
+        ? defaultValue
+        : `'${value}'`;
     setInputValue(newValue);
   };
   return (
@@ -17,7 +19,7 @@ const InputValueUsecase = () => {
         onChange={(e) => updateValue(e.target.value)}
       />
       <GutterRow />
-      {inputValue || defaultValue}
+      {`Value: ${inputValue || defaultValue}`}
     </>
   );
 };

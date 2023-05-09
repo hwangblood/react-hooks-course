@@ -17,14 +17,15 @@ const useStateUsecases = [
   {
     id: "counter",
     title: "Counter",
-    description: "Counter App",
+    description:
+      "Click the button to increase or decrease the value of the counter",
     // A React element type (ie. MyComponent).
     element: CounterUsecase,
   },
   {
     id: "input-value",
     title: "Input Value",
-    description: "Input Value App",
+    description: "Enter text in the text box, to see value changes",
     element: InputValueUsecase,
   },
 ];
