@@ -1,6 +1,8 @@
-# React Hooks Course - All React Hooks Explained 
+# React Hooks Course - All React Hooks Explained
 
 Following the youtube video course [React Hooks Explained](https://youtu.be/LlvBzyy-558) created by [PedroTech](https://www.youtube.com/@PedroTechnologies)
+
+Check out the code implements of **React Hooks** usecases in [src/components/usecases](./src/components/usecases) folder
 
 ## Resources
 
