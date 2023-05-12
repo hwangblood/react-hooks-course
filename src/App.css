@@ -71,10 +71,12 @@
 }
 
 .UsecaseTitle {
+  margin: 8px 0;
   font-size: 1.15rem;
 }
 
 .UsecaseSubtitle {
+  margin: 6px 0;
   font-size: 1.1rem;
   color: rgb(69, 69, 69);
 }
