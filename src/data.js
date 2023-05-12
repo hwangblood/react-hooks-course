@@ -1,4 +1,5 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
+import UseReducerUsecase from "./components/usecases/useReducer/UseReducerUsecase";
 import CounterUsecase from "./components/usecases/useState/CounterUsecase";
 import InputValueUsecase from "./components/usecases/useState/InputValueUsecase";
 
@@ -30,6 +31,16 @@ const useStateUsecases = [
   },
 ];
 
+const useReducerUsecases = [
+  {
+    id: "usereducer-usecase",
+    title: "Manage complex state in useReducer()",
+    description:
+      "Use useReducer() to manage complex state, but not multiple useState()",
+    element: UseReducerUsecase,
+  },
+];
+
 export default {
   // this property is required
   hookExamples: [
@@ -43,8 +54,16 @@ export default {
     {
       id: "useState",
       title: "useState() Hook Example",
-      description: "useState description",
+      description:
+        "It allows us to track state in a function component or application. (State generally refers to data or properties) ",
       usecases: useStateUsecases,
+    },
+    {
+      id: "useReducer",
+      title: "useReducer() Hook Example",
+      description:
+        "If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.",
+      usecases: useReducerUsecases,
     },
   ],
 };
