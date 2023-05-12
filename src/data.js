@@ -1,5 +1,5 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
-import UseReducerUsecase from "./components/usecases/useReducer/UseReducerUsecase";
+import ReducerUsecase from "./components/usecases/useReducer/ReducerUsecase";
 import CounterUsecase from "./components/usecases/useState/CounterUsecase";
 import InputValueUsecase from "./components/usecases/useState/InputValueUsecase";
 
@@ -33,11 +33,11 @@ const useStateUsecases = [
 
 const useReducerUsecases = [
   {
-    id: "usereducer-usecase",
+    id: "reducer-usecase",
     title: "Manage complex state in useReducer()",
     description:
       "Use useReducer() to manage complex state, but not multiple useState()",
-    element: UseReducerUsecase,
+    element: ReducerUsecase,
   },
 ];
 
