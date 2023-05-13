@@ -1,13 +1,14 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
 import EffectUsecase from "./components/usecases/useEffect/EffectUsecase";
 import ReducerUsecase from "./components/usecases/useReducer/ReducerUsecase";
+import RefUsecase from "./components/usecases/useRef/RefUsecase";
 import CounterUsecase from "./components/usecases/useState/CounterUsecase";
 import InputValueUsecase from "./components/usecases/useState/InputValueUsecase";
 
 // eslint-disable-next-line no-unused-vars
 const fakeUsecases = [
   {
-    id: "usecase-id",
+    id: "fake-usecase",
     title: "Title of usecase",
     description: "Description of usecase",
     // A React element type (ie. MyComponent).
@@ -31,7 +32,6 @@ const useStateUsecases = [
     element: InputValueUsecase,
   },
 ];
-
 const useReducerUsecases = [
   {
     id: "reducer-usecase",
@@ -48,6 +48,15 @@ const useEffectUsecases = [
     description:
       "Call HTTP API when component firstly renders or clicking the button",
     element: EffectUsecase,
+  },
+];
+const useRefUsecases = [
+  {
+    id: "ref-usecase",
+    title: "Handle input's changes, and access DOM element",
+    description:
+      "Store the number of renders for component, and operate DOM element. Click buttons to see how it works",
+    element: RefUsecase,
   },
 ];
 
@@ -81,6 +90,13 @@ export default {
       description:
         "It allows you to perform side effects in your components. Such as: fetching data, directly updating the DOM, and timers.",
       usecases: useEffectUsecases,
+    },
+    {
+      id: "useRef",
+      title: "useRef() Hook Example",
+      description:
+        "It allows you to persist values between renders and access a DOM element directly.",
+      usecases: useRefUsecases,
     },
   ],
 };
