@@ -1,4 +1,5 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
+import EffectUsecase from "./components/usecases/useEffect/EffectUsecase";
 import ReducerUsecase from "./components/usecases/useReducer/ReducerUsecase";
 import CounterUsecase from "./components/usecases/useState/CounterUsecase";
 import InputValueUsecase from "./components/usecases/useState/InputValueUsecase";
@@ -40,6 +41,15 @@ const useReducerUsecases = [
     element: ReducerUsecase,
   },
 ];
+const useEffectUsecases = [
+  {
+    id: "effect-usecase",
+    title: "API calling by useEffect",
+    description:
+      "Call HTTP API when component firstly renders or clicking the button",
+    element: EffectUsecase,
+  },
+];
 
 export default {
   // this property is required
@@ -64,6 +74,13 @@ export default {
       description:
         "If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.",
       usecases: useReducerUsecases,
+    },
+    {
+      id: "useEffect",
+      title: "useEffect() Hook Example",
+      description:
+        "It allows you to perform side effects in your components. Such as: fetching data, directly updating the DOM, and timers.",
+      usecases: useEffectUsecases,
     },
   ],
 };
