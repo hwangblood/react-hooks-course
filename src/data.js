@@ -1,5 +1,6 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
 import EffectUsecase from "./components/usecases/useEffect/EffectUsecase";
+import LayoutEffectUsecase from "./components/usecases/useLayoutEffect/LayoutEffectUsecase";
 import ReducerUsecase from "./components/usecases/useReducer/ReducerUsecase";
 import RefUsecase from "./components/usecases/useRef/RefUsecase";
 import CounterUsecase from "./components/usecases/useState/CounterUsecase";
@@ -59,6 +60,15 @@ const useRefUsecases = [
     element: RefUsecase,
   },
 ];
+const useLayoutEffectUsecases = [
+  {
+    id: "layout-effect-usecase",
+    title: "Track a value with useLayoutEffect() and useEffect()",
+    description:
+      "Every time when typing in the text box will update state, so component needs to be re-render. The values should be same, because we have changed state before rendering component.",
+    element: LayoutEffectUsecase,
+  },
+];
 
 export default {
   // this property is required
@@ -97,6 +107,13 @@ export default {
       description:
         "It allows you to persist values between renders and access a DOM element directly.",
       usecases: useRefUsecases,
+    },
+    {
+      id: "useLayoutEffect",
+      title: "useLayoutEffect() Hook Example",
+      description:
+        "It is fimilar to userEffect(),but it fires before the component render ( very useful in specific cases).",
+      usecases: useLayoutEffectUsecases,
     },
   ],
 };
