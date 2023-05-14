@@ -1,5 +1,6 @@
 import HookExampleUsecaseContentSpacer from "./components/HookExampleUsecaseContentSpacer";
 import EffectUsecase from "./components/usecases/useEffect/EffectUsecase";
+import HamburgUsecase from "./components/usecases/useLayoutEffect/HamburgUsecase";
 import LayoutEffectUsecase from "./components/usecases/useLayoutEffect/LayoutEffectUsecase";
 import ReducerUsecase from "./components/usecases/useReducer/ReducerUsecase";
 import RefUsecase from "./components/usecases/useRef/RefUsecase";
@@ -67,6 +68,13 @@ const useLayoutEffectUsecases = [
     description:
       "Every time when typing in the text box will update state, so component needs to be re-render. The values should be same, because we have changed state before rendering component.",
     element: LayoutEffectUsecase,
+  },
+  {
+    id: "eating-hamburg",
+    title: "Eating Hamburg",
+    description:
+      "Every time when typing in the text box will have one more hamburg 🍔, at this time useLayoutEffect() will be fired to store current eating logs and a new log into state, then re-generate eating logs list.",
+    element: HamburgUsecase,
   },
 ];
 
